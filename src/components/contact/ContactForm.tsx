@@ -151,7 +151,7 @@ export function ContactForm() {
       <div className="mt-6">
         <Button
           type="submit"
-          variant="primary"
+          variant="solid"
           size="lg"
           className="w-full"
           disabled={status === "loading"}

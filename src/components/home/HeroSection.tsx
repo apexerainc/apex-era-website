@@ -1,150 +1,74 @@
 "use client";
 
-import { useState } from "react";
-import { motion } from "framer-motion";
-import { ArrowRight, CheckCircle } from "lucide-react";
-import { ScrollReveal } from "@/components/ui/ScrollReveal";
-import { Button } from "@/components/ui/Button";
-import { Badge } from "@/components/ui/Badge";
-import { Input } from "@/components/ui/Input";
 import { Container } from "@/components/ui/Container";
-import { GradientText } from "@/components/ui/GradientText";
-import { auditFormSchema } from "@/types";
 
 export function HeroSection() {
-  const [url, setUrl] = useState("");
-  const [email, setEmail] = useState("");
-  const [errors, setErrors] = useState<{ url?: string; email?: string }>({});
-  const [submitted, setSubmitted] = useState(false);
-
-  function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    setErrors({});
-
-    const result = auditFormSchema.safeParse({ url, email });
-    if (!result.success) {
-      const fieldErrors: { url?: string; email?: string } = {};
-      for (const issue of result.error.issues) {
-        const field = issue.path[0] as "url" | "email";
-        fieldErrors[field] = issue.message;
-      }
-      setErrors(fieldErrors);
-      return;
-    }
-
-    setSubmitted(true);
-  }
-
   return (
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden">
-      {/* Dot grid pattern — subtle premium feel */}
-      <div
-        className="absolute inset-0 opacity-10"
-        style={{
-          backgroundImage:
-            "radial-gradient(circle, rgba(59,164,255,0.12) 1px, transparent 1px)",
-          backgroundSize: "40px 40px",
-        }}
-      />
+    <section className="relative overflow-hidden bg-white">
+      <Container className="pb-16 pt-20 text-center sm:pt-32 lg:pt-32">
+        {/* Heading */}
+        <h1 className="mx-auto max-w-4xl text-5xl font-medium tracking-tight text-slate-900 sm:text-7xl">
+          Marketing{" "}
+          <span className="relative inline-block">
+            made simple
+            {/* Hand-drawn squiggly underline */}
+            <svg
+              aria-hidden="true"
+              viewBox="0 0 281 40"
+              preserveAspectRatio="none"
+              className="absolute -bottom-2 left-0 h-[0.6em] w-full fill-none stroke-blue-600"
+            >
+              <path
+                d="M2 30 C30 8, 60 8, 90 28 S150 8, 190 28 S230 8, 279 28"
+                strokeWidth="3"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </span>
+          <br />
+          for restoration companies.
+        </h1>
 
-      {/* Decorative gradient orbs */}
-      <div className="gradient-orb gradient-orb-blue absolute -top-20 -right-40 h-[500px] w-[500px]" />
-      <div className="gradient-orb gradient-orb-cyan absolute -bottom-32 -left-40 h-80 w-80" />
+        {/* Subtitle */}
+        <p className="mx-auto mt-6 max-w-2xl text-lg tracking-tight text-slate-600">
+          We help restoration companies generate more leads, dominate local
+          search, and scale with AI-powered marketing tools.
+        </p>
 
-      {/* Subtle central glow for depth */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-primary/5 blur-[120px]" />
+        {/* Buttons */}
+        <div className="mt-10 flex justify-center gap-4">
+          <a
+            href="/contact"
+            className="inline-flex items-center justify-center rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-colors"
+          >
+            Get Free Audit
+          </a>
+          <a
+            href="#features"
+            className="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-900 hover:border-slate-400 hover:bg-slate-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-400 transition-colors"
+          >
+            Learn More
+          </a>
+        </div>
 
-      <Container className="relative z-10 py-20 sm:py-28 lg:py-32">
-        <div className="mx-auto max-w-4xl text-center">
-          {/* Eyebrow badge */}
-          <ScrollReveal delay={0}>
-            <div className="mb-6 flex justify-center">
-              <Badge>Built by Restorers, for Restorers</Badge>
-            </div>
-          </ScrollReveal>
-
-          {/* H1 */}
-          <ScrollReveal delay={0.1}>
-            <h1 className="font-heading text-4xl font-bold tracking-tight text-text sm:text-5xl lg:text-6xl xl:text-7xl">
-              Grow Your Restoration Business with{" "}
-              <GradientText>Digital Marketing That Works</GradientText>
-            </h1>
-          </ScrollReveal>
-
-          {/* Subtitle */}
-          <ScrollReveal delay={0.2}>
-            <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-text-muted sm:text-xl">
-              We help restoration companies generate more leads, dominate local
-              search, and scale their business with AI-powered marketing tools.
-            </p>
-          </ScrollReveal>
-
-          {/* Audit form */}
-          <ScrollReveal delay={0.3}>
-            <div className="mx-auto mt-10 max-w-2xl">
-              {submitted ? (
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  className="flex items-center justify-center gap-3 rounded-xl border border-success/30 bg-success/10 px-6 py-4"
-                >
-                  <CheckCircle className="h-5 w-5 text-success" />
-                  <p className="text-sm font-medium text-success">
-                    Your free audit request has been submitted. We will be in
-                    touch shortly!
-                  </p>
-                </motion.div>
-              ) : (
-                <form
-                  onSubmit={handleSubmit}
-                  className="flex flex-col gap-3 sm:flex-row sm:items-start"
-                >
-                  <div className="flex-1">
-                    <Input
-                      type="url"
-                      placeholder="Your website URL"
-                      value={url}
-                      onChange={(e) => setUrl(e.target.value)}
-                      error={errors.url}
-                      aria-label="Website URL"
-                    />
-                  </div>
-                  <div className="flex-1">
-                    <Input
-                      type="email"
-                      placeholder="Your email address"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      error={errors.email}
-                      aria-label="Email address"
-                    />
-                  </div>
-                  <Button type="submit" size="lg" className="sm:flex-shrink-0">
-                    Get Free Audit
-                    <ArrowRight className="h-4 w-4" />
-                  </Button>
-                </form>
-              )}
-            </div>
-          </ScrollReveal>
-
-          {/* Trust strip */}
-          <ScrollReveal delay={0.4}>
-            <div className="mx-auto mt-12 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-text-muted">
-              <div className="flex items-center gap-2">
-                <CheckCircle className="h-4 w-4 text-primary" />
-                <span>Trusted by 100+ restoration companies</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle className="h-4 w-4 text-primary" />
-                <span>C&amp;R Magazine Featured</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle className="h-4 w-4 text-primary" />
-                <span>$3M+ avg revenue per client</span>
-              </div>
-            </div>
-          </ScrollReveal>
+        {/* Trust logos strip */}
+        <div className="mt-36 sm:mt-44">
+          <p className="text-sm font-medium text-slate-500">
+            Trusted by these industry leaders
+          </p>
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-x-12 gap-y-6">
+            {/* Text-styled logos for a clean, typographic approach */}
+            <span className="text-lg font-bold tracking-tight text-slate-400 grayscale transition hover:text-slate-600">
+              C&amp;R Magazine
+            </span>
+            <span className="text-lg font-bold tracking-tight text-slate-400 grayscale transition hover:text-slate-600">
+              Digital Journal
+            </span>
+            <span className="text-lg font-bold tracking-tight text-slate-400 grayscale transition hover:text-slate-600">
+              100+ Restoration Companies
+            </span>
+          </div>
         </div>
       </Container>
     </section>

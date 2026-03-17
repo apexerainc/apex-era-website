@@ -51,7 +51,7 @@ export default function ContactPage() {
                 href="https://calendly.com/apexerainc"
                 target="_blank"
                 rel="noopener noreferrer"
-                variant="primary"
+                variant="solid"
                 size="lg"
               >
                 Schedule a Call

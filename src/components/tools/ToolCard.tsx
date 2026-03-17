@@ -58,7 +58,7 @@ export function ToolCard({ tool, index = 0 }: ToolCardProps) {
 
         <div className="mt-5">
           {tool.comingSoon ? (
-            <Button variant="secondary" size="sm" disabled>
+            <Button variant="outline" size="sm" disabled>
               Coming Soon
             </Button>
           ) : (

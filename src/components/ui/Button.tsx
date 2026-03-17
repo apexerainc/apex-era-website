@@ -4,7 +4,7 @@ import { forwardRef } from "react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
-type ButtonVariant = "primary" | "secondary" | "outline" | "ghost" | "gradient";
+type ButtonVariant = "solid" | "outline" | "ghost";
 type ButtonSize = "sm" | "md" | "lg";
 
 interface ButtonBaseProps {
@@ -29,22 +29,18 @@ interface ButtonAsLink extends ButtonBaseProps {
 type ButtonProps = ButtonAsButton | ButtonAsLink;
 
 const variantStyles: Record<ButtonVariant, string> = {
-  primary:
-    "gradient-bg text-white shadow-lg hover:shadow-primary/25 hover:brightness-110",
-  secondary:
-    "bg-card text-text border border-border hover:bg-card-hover hover:border-border-hover",
+  solid:
+    "bg-primary text-white shadow-sm hover:bg-primary-hover",
   outline:
-    "bg-transparent text-primary border border-primary hover:bg-primary/10",
+    "bg-transparent border border-slate-300 text-slate-700 hover:border-slate-400 hover:text-slate-900",
   ghost:
-    "bg-transparent text-text-muted hover:text-text hover:bg-white/5",
-  gradient:
-    "gradient-border bg-background text-text hover:bg-card",
+    "bg-transparent text-slate-700 hover:text-slate-900 hover:bg-slate-50",
 };
 
 const sizeStyles: Record<ButtonSize, string> = {
-  sm: "px-4 py-2 text-sm rounded-lg",
-  md: "px-6 py-2.5 text-sm rounded-lg",
-  lg: "px-8 py-3 text-base rounded-xl",
+  sm: "px-4 py-2 text-sm rounded-full",
+  md: "px-6 py-2.5 text-sm rounded-full",
+  lg: "px-8 py-3 text-base rounded-full",
 };
 
 export const Button = forwardRef<
@@ -52,7 +48,7 @@ export const Button = forwardRef<
   ButtonProps
 >(function Button(props, ref) {
   const {
-    variant = "primary",
+    variant = "solid",
     size = "md",
     className,
     children,
@@ -61,7 +57,7 @@ export const Button = forwardRef<
 
   const classes = cn(
     "inline-flex items-center justify-center gap-2 font-medium transition-all duration-200 cursor-pointer select-none",
-    "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:ring-offset-2 focus-visible:ring-offset-background",
+    "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:ring-offset-2 focus-visible:ring-offset-white",
     "disabled:opacity-50 disabled:pointer-events-none",
     variantStyles[variant],
     sizeStyles[size],

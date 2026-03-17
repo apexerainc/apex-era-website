@@ -66,7 +66,7 @@ export function ToolsShowcase() {
                   </p>
                   <div>
                     {tool.comingSoon ? (
-                      <Button variant="secondary" size="sm" disabled>
+                      <Button variant="outline" size="sm" disabled>
                         Coming Soon
                       </Button>
                     ) : (

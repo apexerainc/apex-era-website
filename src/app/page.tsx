@@ -1,15 +1,13 @@
 import type { Metadata } from "next";
 import { createMetadata } from "@/lib/metadata";
 import { HeroSection } from "@/components/home/HeroSection";
-import { ValueProps } from "@/components/home/ValueProps";
-import { AboutPreview } from "@/components/home/AboutPreview";
-import { ServiceGrid } from "@/components/home/ServiceGrid";
-import { StatsCounter } from "@/components/home/StatsCounter";
-import { ToolsShowcase } from "@/components/home/ToolsShowcase";
-import { TestimonialCarousel } from "@/components/home/TestimonialCarousel";
-import { PressLogos } from "@/components/home/PressLogos";
+import { PrimaryFeatures } from "@/components/home/PrimaryFeatures";
+import { SecondaryFeatures } from "@/components/home/SecondaryFeatures";
+import { TabSection } from "@/components/home/TabSection";
 import { CTABanner } from "@/components/home/CTABanner";
-import { SEOHeatmap } from "@/components/home/SEOHeatmap";
+import { TestimonialSection } from "@/components/home/TestimonialSection";
+import { PricingSection } from "@/components/home/PricingSection";
+import { FAQSection } from "@/components/home/FAQSection";
 
 export const metadata: Metadata = createMetadata({
   description:
@@ -20,15 +18,13 @@ export default function HomePage() {
   return (
     <>
       <HeroSection />
-      <ValueProps />
-      <SEOHeatmap />
-      <AboutPreview />
-      <ServiceGrid />
-      <StatsCounter />
-      <ToolsShowcase />
-      <TestimonialCarousel />
-      <PressLogos />
+      <PrimaryFeatures />
+      <SecondaryFeatures />
+      <TabSection />
       <CTABanner />
+      <TestimonialSection />
+      <PricingSection />
+      <FAQSection />
     </>
   );
 }
