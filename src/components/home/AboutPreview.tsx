@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
-import { COMPANY } from "@/lib/constants";
+import { LiveDashboard } from "@/components/home/LiveDashboard";
 
 export function AboutPreview() {
   return (
@@ -14,21 +14,9 @@ export function AboutPreview() {
 
       <Container className="relative z-10">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
-          {/* Left: Image placeholder */}
+          {/* Left: Live Analytics Dashboard */}
           <ScrollReveal direction="left">
-            <div className="relative flex aspect-[4/3] items-center justify-center overflow-hidden rounded-2xl glass">
-              <div className="text-center">
-                <div className="mb-3 text-4xl font-bold tracking-tight text-primary sm:text-5xl">
-                  APEX ERA
-                </div>
-                <p className="text-sm text-text-muted">
-                  {COMPANY.tagline}
-                </p>
-              </div>
-              {/* Decorative gradient circles */}
-              <div className="absolute -bottom-10 -right-10 h-40 w-40 rounded-full bg-primary/10 blur-[60px]" />
-              <div className="absolute -top-10 -left-10 h-32 w-32 rounded-full bg-accent/10 blur-[60px]" />
-            </div>
+            <LiveDashboard />
           </ScrollReveal>
 
           {/* Right: Text content */}

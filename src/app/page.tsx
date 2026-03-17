@@ -9,6 +9,7 @@ import { ToolsShowcase } from "@/components/home/ToolsShowcase";
 import { TestimonialCarousel } from "@/components/home/TestimonialCarousel";
 import { PressLogos } from "@/components/home/PressLogos";
 import { CTABanner } from "@/components/home/CTABanner";
+import { SEOHeatmap } from "@/components/home/SEOHeatmap";
 
 export const metadata: Metadata = createMetadata({
   description:
@@ -20,6 +21,7 @@ export default function HomePage() {
     <>
       <HeroSection />
       <ValueProps />
+      <SEOHeatmap />
       <AboutPreview />
       <ServiceGrid />
       <StatsCounter />
