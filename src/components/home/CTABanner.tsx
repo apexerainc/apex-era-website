@@ -1,6 +1,7 @@
 "use client";
 
 import { Container } from "@/components/ui/Container";
+import { CalendlyWidget } from "@/components/ui/CalendlyWidget";
 
 export function CTABanner() {
   return (
@@ -14,13 +15,13 @@ export function CTABanner() {
             It&apos;s time to dominate your local market. Partner with the only
             agency built by restorers, for restorers.
           </p>
-          <div className="mt-8">
-            <a
-              href="/contact"
-              className="inline-flex items-center justify-center rounded-full bg-white px-8 py-3 text-sm font-semibold text-primary shadow-sm transition-colors hover:bg-blue-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-            >
-              Schedule a Free Strategy Call
-            </a>
+        </div>
+        <div className="mx-auto mt-10 max-w-3xl rounded-xl bg-white p-6 shadow-lg sm:p-8">
+          <h3 className="text-center text-lg font-semibold text-slate-900">
+            Schedule a Free Strategy Call
+          </h3>
+          <div className="mt-4">
+            <CalendlyWidget />
           </div>
         </div>
       </Container>

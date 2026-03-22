@@ -19,10 +19,11 @@ export function Footer() {
         {/* Logo */}
         <Link href="/" className="inline-block">
           <Image
-            src="/logo.svg"
+            src="/logo.png"
             alt={COMPANY.name}
-            width={160}
-            height={40}
+            width={180}
+            height={45}
+            className="h-10 w-auto"
           />
         </Link>
 

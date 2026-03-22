@@ -1,10 +1,10 @@
 "use client";
 
-import { ArrowRight, Phone } from "lucide-react";
+import { Phone } from "lucide-react";
 import { Container } from "@/components/ui/Container";
-import { Button } from "@/components/ui/Button";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { COMPANY } from "@/lib/constants";
+import { CalendlyWidget } from "@/components/ui/CalendlyWidget";
 
 export function ServiceCTA() {
   return (
@@ -19,22 +19,23 @@ export function ServiceCTA() {
               Let us show you how we can transform your online presence and drive
               real growth for your restoration business.
             </p>
-            <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <Button href="/contact" size="lg">
-                Book a Call
-                <ArrowRight className="h-4 w-4" />
-              </Button>
-              <Button
-                href={`tel:${COMPANY.phoneRaw}`}
-                variant="outline"
-                size="lg"
-              >
-                <Phone className="h-4 w-4" />
-                {COMPANY.phone}
-              </Button>
-            </div>
+            <a
+              href={`tel:${COMPANY.phoneRaw}`}
+              className="mt-4 inline-flex items-center gap-2 text-sm text-text-muted transition-colors hover:text-primary"
+            >
+              <Phone className="h-4 w-4" />
+              Or call us directly at {COMPANY.phone}
+            </a>
           </div>
         </ScrollReveal>
+        <div className="mx-auto mt-10 max-w-3xl rounded-xl border border-border bg-card p-6 sm:p-8">
+          <h3 className="text-center text-lg font-semibold text-text">
+            Schedule a Free Strategy Call
+          </h3>
+          <div className="mt-4">
+            <CalendlyWidget />
+          </div>
+        </div>
       </Container>
     </section>
   );
