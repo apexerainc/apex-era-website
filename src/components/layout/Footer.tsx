@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { COMPANY } from "@/lib/constants";
 
@@ -17,9 +18,12 @@ export function Footer() {
       <Container className="py-16 text-center">
         {/* Logo */}
         <Link href="/" className="inline-block">
-          <span className="text-xl font-bold text-primary">
-            {COMPANY.name}
-          </span>
+          <Image
+            src="/logo.svg"
+            alt={COMPANY.name}
+            width={160}
+            height={40}
+          />
         </Link>
 
         {/* Nav Links */}

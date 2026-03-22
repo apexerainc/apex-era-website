@@ -103,7 +103,7 @@ export function PrimaryFeatures() {
   return (
     <section
       id="features"
-      className="relative overflow-hidden bg-gradient-to-br from-blue-600 to-blue-700 py-20 sm:py-32"
+      className="relative overflow-hidden bg-gradient-to-br from-primary to-primary-hover py-20 sm:py-32"
     >
       <Container>
         <div className="lg:flex lg:items-start lg:gap-16">

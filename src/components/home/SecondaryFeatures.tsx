@@ -43,8 +43,8 @@ export function SecondaryFeatures() {
         <div className="mx-auto mt-16 grid max-w-5xl grid-cols-1 gap-8 lg:grid-cols-3">
           {features.map((feature) => (
             <div key={feature.title} className="flex flex-col">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-600/10">
-                <feature.icon className="h-5 w-5 text-blue-600" />
+              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
+                <feature.icon className="h-5 w-5 text-primary" />
               </div>
               <h3 className="mt-4 text-base font-semibold text-slate-900">
                 {feature.title}

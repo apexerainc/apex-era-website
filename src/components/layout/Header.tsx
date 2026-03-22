@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -51,9 +52,13 @@ export function Header() {
         <Container className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 shrink-0">
-            <span className="text-xl font-bold text-primary">
-              {COMPANY.name}
-            </span>
+            <Image
+              src="/logo.svg"
+              alt={COMPANY.name}
+              width={160}
+              height={40}
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation */}

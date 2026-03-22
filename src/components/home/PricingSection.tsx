@@ -30,7 +30,7 @@ function PricingCard({ plan }: { plan: PricingPlan }) {
     <div
       className={`flex flex-col rounded-2xl p-8 ${
         isHighlighted
-          ? "bg-blue-600 text-white ring-4 ring-blue-600/20"
+          ? "bg-primary text-white ring-4 ring-primary/20"
           : "bg-white text-slate-900"
       }`}
     >
@@ -70,7 +70,7 @@ function PricingCard({ plan }: { plan: PricingPlan }) {
           <li key={feature.text} className="flex items-start gap-3">
             <CheckIcon
               className={`h-5 w-5 flex-shrink-0 ${
-                isHighlighted ? "text-blue-200" : "text-blue-600"
+                isHighlighted ? "text-blue-200" : "text-primary"
               }`}
             />
             <span
@@ -89,7 +89,7 @@ function PricingCard({ plan }: { plan: PricingPlan }) {
           href="/contact"
           className={`inline-flex w-full items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 ${
             isHighlighted
-              ? "bg-white text-blue-600 hover:bg-blue-50 focus-visible:outline-white"
+              ? "bg-white text-primary hover:bg-blue-50 focus-visible:outline-white"
               : "border border-slate-300 bg-transparent text-slate-900 hover:border-slate-400 hover:bg-slate-50 focus-visible:outline-slate-400"
           }`}
         >
