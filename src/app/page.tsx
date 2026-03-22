@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { createMetadata } from "@/lib/metadata";
 import { HeroSection } from "@/components/home/HeroSection";
 import { PrimaryFeatures } from "@/components/home/PrimaryFeatures";
-import { SecondaryFeatures } from "@/components/home/SecondaryFeatures";
+
 import { TabSection } from "@/components/home/TabSection";
 import { CTABanner } from "@/components/home/CTABanner";
 import { TestimonialSection } from "@/components/home/TestimonialSection";
@@ -21,7 +21,7 @@ export default function HomePage() {
     <>
       <HeroSection />
       <PrimaryFeatures />
-      <SecondaryFeatures />
+
       <TabSection />
       <CTABanner />
       <TestimonialSection />

@@ -8,9 +8,9 @@ export function HeroSection() {
       <Container className="pb-16 pt-20 text-center sm:pt-32 lg:pt-32">
         {/* Heading */}
         <h1 className="mx-auto max-w-4xl text-5xl font-medium tracking-tight text-slate-900 sm:text-7xl">
-          Marketing{" "}
+          The #1{" "}
           <span className="relative inline-block">
-            made simple
+            Marketing Agency
             {/* Hand-drawn squiggly underline */}
             <svg
               aria-hidden="true"
@@ -27,13 +27,13 @@ export function HeroSection() {
             </svg>
           </span>
           <br />
-          for restoration companies.
+          for Restoration Companies
         </h1>
 
         {/* Subtitle */}
         <p className="mx-auto mt-6 max-w-2xl text-lg tracking-tight text-slate-600">
-          We help restoration companies generate more leads, dominate local
-          search, and scale with AI-powered marketing tools.
+          SEO, web design, remote Xactimate estimating, and AI-powered
+          automation — built by restorers, for restorers.
         </p>
 
         {/* Buttons */}

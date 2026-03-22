@@ -55,10 +55,10 @@ export function Header() {
             <Image
               src="/logo.png"
               alt={COMPANY.name}
-              width={180}
-              height={45}
+              width={200}
+              height={43}
               priority
-              className="h-10 w-auto"
+              className="h-9 w-auto sm:h-10"
             />
           </Link>
 
