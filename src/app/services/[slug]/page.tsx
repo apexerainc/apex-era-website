@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Search, Layout, Calculator, Zap, MessageSquare, GitCompare, Brain, Megaphone, BarChart3 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { createMetadata } from "@/lib/metadata";
+import { COMPANY } from "@/lib/constants";
 import { Container } from "@/components/ui/Container";
 import { Card } from "@/components/ui/Card";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
@@ -10,7 +11,9 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ServiceHero } from "@/components/services/ServiceHero";
 import { ProcessSteps } from "@/components/services/ProcessSteps";
 import { ServiceCTA } from "@/components/services/ServiceCTA";
+import { ServiceJsonLd, BreadcrumbJsonLd, FAQPageJsonLd } from "@/components/seo/JsonLd";
 import { services } from "@/data/services";
+import Link from "next/link";
 
 const iconMap: Record<string, LucideIcon> = {
   Search,
@@ -41,8 +44,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!service) return {};
 
   return createMetadata({
-    title: service.title,
-    description: service.description,
+    title: `${service.title} for Restoration Companies`,
+    description: service.longDescription.slice(0, 155) + "...",
     path: `/services/${service.slug}`,
   });
 }
@@ -57,6 +60,14 @@ export default async function ServiceDetailPage({ params }: PageProps) {
 
   return (
     <main>
+      <ServiceJsonLd service={service} />
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: COMPANY.url },
+          { name: "Services", url: `${COMPANY.url}/services` },
+          { name: service.title, url: `${COMPANY.url}/services/${service.slug}` },
+        ]}
+      />
       <ServiceHero service={service} />
 
       {/* Features Grid */}
@@ -116,6 +127,71 @@ export default async function ServiceDetailPage({ params }: PageProps) {
               ))}
             </div>
           </ScrollReveal>
+        </Container>
+      </section>
+
+      {/* FAQ Section */}
+      {service.faqs && service.faqs.length > 0 && (
+        <>
+          <FAQPageJsonLd faqs={service.faqs} />
+          <section className="border-t border-border py-20 sm:py-24">
+            <Container>
+              <ScrollReveal>
+                <SectionHeading
+                  eyebrow="Common Questions"
+                  title={`${service.shortTitle} FAQ`}
+                  subtitle={`Answers to common questions about ${service.title.toLowerCase()} for restoration companies.`}
+                />
+              </ScrollReveal>
+              <div className="mx-auto mt-12 max-w-3xl space-y-8">
+                {service.faqs.map((faq, index) => (
+                  <ScrollReveal key={faq.question} delay={index * 0.1}>
+                    <div>
+                      <h3 className="text-base font-semibold text-text">
+                        {faq.question}
+                      </h3>
+                      <p className="mt-2 text-sm leading-relaxed text-text-muted">
+                        {faq.answer}
+                      </p>
+                    </div>
+                  </ScrollReveal>
+                ))}
+              </div>
+            </Container>
+          </section>
+        </>
+      )}
+
+      {/* Related Services */}
+      <section className="border-t border-border bg-background-alt py-20 sm:py-24">
+        <Container>
+          <ScrollReveal>
+            <SectionHeading
+              eyebrow="Explore More"
+              title="Related Services"
+              subtitle="See how our other services help restoration companies grow."
+            />
+          </ScrollReveal>
+          <div className="mt-12 grid gap-6 sm:grid-cols-3">
+            {services
+              .filter((s) => s.slug !== service.slug)
+              .slice(0, 3)
+              .map((related, index) => (
+                <ScrollReveal key={related.slug} delay={index * 0.1}>
+                  <Link
+                    href={`/services/${related.slug}`}
+                    className="group block rounded-xl border border-border bg-white p-6 transition-all hover:border-primary/30 hover:shadow-md"
+                  >
+                    <h3 className="font-heading text-base font-semibold text-text group-hover:text-primary transition-colors">
+                      {related.title}
+                    </h3>
+                    <p className="mt-2 text-sm text-text-muted line-clamp-2">
+                      {related.description}
+                    </p>
+                  </Link>
+                </ScrollReveal>
+              ))}
+          </div>
         </Container>
       </section>
 

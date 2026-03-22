@@ -3,7 +3,7 @@ export const COMPANY = {
   legalName: "Apex Era Inc",
   tagline: "Built by Restorers, for Restorers",
   description:
-    "Philadelphia-based digital marketing & technology agency specializing in the water damage restoration industry.",
+    "National digital marketing agency for damage restoration companies. SEO, website design, remote Xactimate estimating, and AI-powered automation tools built by restorers, for restorers.",
   founded: 2023,
   phone: "(609) 931-5050",
   phoneRaw: "+16099315050",

@@ -10,9 +10,9 @@ import { ContactInfo } from "@/components/contact/ContactInfo";
 import { CalendlyWidget } from "@/components/ui/CalendlyWidget";
 
 export const metadata: Metadata = createMetadata({
-  title: "Contact",
+  title: "Contact Us — Free Strategy Call for Restoration Companies",
   description:
-    "Get in touch with Apex Era Inc. Let's discuss how we can help grow your restoration business with SEO, web design, and automation.",
+    "Schedule a free strategy call with Apex Era. We help damage restoration business owners generate more leads with SEO, web design, Xactimate estimating, and AI-powered automation.",
   path: "/contact",
 });
 

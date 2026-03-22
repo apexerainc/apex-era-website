@@ -10,8 +10,10 @@ import { PricingSection } from "@/components/home/PricingSection";
 import { FAQSection } from "@/components/home/FAQSection";
 
 export const metadata: Metadata = createMetadata({
+  title: "Apex Era — #1 Marketing Agency for Restoration Companies | SEO, Web Design & AI Tools",
+  rawTitle: true,
   description:
-    "Apex Era Inc is a Philadelphia-based digital marketing and technology agency built for the water damage restoration industry. SEO, web design, remote estimating, and AI tools.",
+    "Apex Era is the #1 national marketing agency for damage restoration companies. SEO, website design, remote Xactimate estimating, and AI-powered automation tools built by restorers, for restorers.",
 });
 
 export default function HomePage() {

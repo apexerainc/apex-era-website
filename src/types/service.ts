@@ -9,6 +9,11 @@ export interface ProcessStep {
   description: string;
 }
 
+export interface ServiceFAQ {
+  question: string;
+  answer: string;
+}
+
 export interface Service {
   slug: string;
   title: string;
@@ -19,4 +24,5 @@ export interface Service {
   features: ServiceFeature[];
   process: ProcessStep[];
   stats: { label: string; value: string }[];
+  faqs: ServiceFAQ[];
 }

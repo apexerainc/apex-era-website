@@ -63,6 +63,24 @@ export const services: Service[] = [
       { label: "Avg Traffic Increase", value: "300%" },
       { label: "Google Rankings", value: "Top 3" },
     ],
+    faqs: [
+      {
+        question: "How long does it take to see SEO results for my restoration company?",
+        answer: "Most restoration companies see measurable improvements in local search rankings within 60-90 days. Google Business Profile optimizations often show results within 30 days. Lead generation from organic search typically increases steadily over the first 6 months as your domain authority grows.",
+      },
+      {
+        question: "Do you specialize in water damage restoration SEO or all types?",
+        answer: "We specialize in all damage restoration verticals — water damage, fire damage, mold remediation, storm damage, and biohazard cleanup. Each vertical has unique keyword strategies and content needs that we tailor to your specific services and service areas.",
+      },
+      {
+        question: "How is your SEO different from a generic marketing agency?",
+        answer: "Generic agencies don't understand restoration industry terminology, seasonal search patterns, or insurance-driven lead behavior. We know the difference between Category 1 and Category 3 water damage, and we build content that reflects that expertise. Our team has 20+ years of hands-on restoration experience.",
+      },
+      {
+        question: "Can you help my restoration company rank in multiple cities?",
+        answer: "Yes. We build location-specific service pages and Google Business Profile strategies for every city and service area you target. Multi-location SEO is one of our core strengths — we help restoration companies dominate search results across their entire service territory.",
+      },
+    ],
   },
   {
     slug: "website-design",
@@ -125,6 +143,24 @@ export const services: Service[] = [
       { label: "Sites Launched", value: "75+" },
       { label: "Avg Load Time", value: "< 2s" },
       { label: "Conversion Rate Lift", value: "150%" },
+    ],
+    faqs: [
+      {
+        question: "Why do restoration companies need a specialized website?",
+        answer: "Restoration customers are in emergency situations — a burst pipe at 2 AM, a house fire, storm damage. Your website needs to convert these urgent visitors into calls within seconds. Generic websites miss critical elements like click-to-call buttons, 24/7 messaging, insurance claim guidance, and trust signals that restoration customers need.",
+      },
+      {
+        question: "Will my new restoration website be optimized for mobile?",
+        answer: "Absolutely. Over 70% of restoration leads come from mobile devices. Every site we build is mobile-first, meaning we design for phone screens first and scale up. Click-to-call buttons, fast load times, and thumb-friendly navigation are built in from day one.",
+      },
+      {
+        question: "How long does a restoration website project take?",
+        answer: "Most restoration company websites launch within 4-6 weeks from kickoff. This includes discovery, custom design, development, content writing, SEO setup, and thorough testing. We don't use templates — every site is custom-built for your brand and market.",
+      },
+      {
+        question: "Do you write the website content or do I need to provide it?",
+        answer: "We handle all copywriting. Our writers understand restoration terminology, insurance processes, and what homeowners and property managers need to hear. We write content that speaks to both emergency residential customers and commercial property managers in language they understand.",
+      },
     ],
   },
   {
@@ -189,6 +225,24 @@ export const services: Service[] = [
       { label: "Avg Turnaround", value: "36hrs" },
       { label: "Approval Rate", value: "98%" },
     ],
+    faqs: [
+      {
+        question: "What estimating platforms do you support?",
+        answer: "We write estimates in both Xactimate and Symbility. Our certified estimators are proficient in all versions of Xactimate including Xactimate Online, and we support Symbility for carriers and TPAs that require it. We can also produce estimates in CoreLogic formats.",
+      },
+      {
+        question: "How does the remote estimating process work?",
+        answer: "You submit your scope of work, photos, measurements, and any carrier-specific requirements through our portal or email. Our team reviews the documentation, asks clarifying questions if needed, and a certified estimator builds your estimate. Completed estimates are delivered within 24-48 hours.",
+      },
+      {
+        question: "Do your estimators understand carrier guidelines?",
+        answer: "Yes. Our estimators have 20+ years of experience working with all major carriers including State Farm, Allstate, USAA, Travelers, and Liberty Mutual. We understand each carrier's specific pricing preferences, documentation requirements, and approval patterns.",
+      },
+      {
+        question: "Can you help with supplements and re-inspections?",
+        answer: "Absolutely. Supplementing is a critical part of the estimating process. When additional damage is discovered during mitigation or reconstruction, we document it with proper line items and supporting evidence. Our supplement approval rate exceeds 95% because of thorough documentation.",
+      },
+    ],
   },
   {
     slug: "automations",
@@ -251,6 +305,24 @@ export const services: Service[] = [
       { label: "Automations Built", value: "200+" },
       { label: "Hours Saved Weekly", value: "20+" },
       { label: "Response Time", value: "< 60s" },
+    ],
+    faqs: [
+      {
+        question: "What restoration CRMs do you integrate with?",
+        answer: "We integrate with all major restoration CRMs and job management platforms including DASH, PSA, Xcelerate, RestoreManager, iRestore, and Next Gear. We also connect with QuickBooks, Jobber, and ServiceTitan for companies using general contractor software.",
+      },
+      {
+        question: "How fast can automations respond to new leads?",
+        answer: "Our lead auto-response automations engage with new leads within 30-60 seconds of form submission or missed call. This includes personalized text messages, emails, and voicemail drops. In the restoration industry, the first company to respond wins the job over 70% of the time.",
+      },
+      {
+        question: "Will automations replace my office staff?",
+        answer: "No — automations handle the repetitive, time-consuming tasks that slow your team down. Things like data entry, lead follow-up, appointment confirmations, and report generation. This frees your team to focus on high-value activities like customer relationships and job management.",
+      },
+      {
+        question: "How long does it take to set up custom automations?",
+        answer: "Most automation projects are fully deployed within 2-4 weeks. This includes workflow mapping, platform integration, testing, and team training. We start with the highest-impact automations first — typically lead auto-response and job status notifications — so you see ROI immediately.",
+      },
     ],
   },
 ];

@@ -10,9 +10,9 @@ import { PressLogos } from "@/components/home/PressLogos";
 import { CTABanner } from "@/components/home/CTABanner";
 
 export const metadata = createMetadata({
-  title: "About Us",
+  title: "About Us — Built by Restorers, for Restorers",
   description:
-    "Learn about Apex Era Inc — founded by a 20-year restoration veteran, we build digital marketing solutions and AI tools specifically for the restoration industry.",
+    "Apex Era was founded by a 20-year restoration industry veteran. We build marketing solutions and AI tools that help damage restoration business owners generate more leads and grow nationally.",
   path: "/about",
 });
 

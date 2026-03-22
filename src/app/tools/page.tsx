@@ -6,9 +6,10 @@ import { CTABanner } from "@/components/home/CTABanner";
 import { tools } from "@/data/tools";
 
 export const metadata = createMetadata({
-  title: "AI Tools",
+  title: "Free AI Tools for Restoration Companies — ChatGPP, Xcavate & More",
+  rawTitle: true,
   description:
-    "Free AI-powered tools for the restoration industry — ChatGPP, Xcavate, EchoScope, and more. Built by restorers, for restorers.",
+    "Free AI-powered tools built for damage restoration professionals. ChatGPP for IICRC standards, Xcavate for Xactimate estimating, and EchoScope for market intelligence.",
   path: "/tools",
 });
 

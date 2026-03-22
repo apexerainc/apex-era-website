@@ -1,6 +1,7 @@
 "use client";
 
 import { Container } from "@/components/ui/Container";
+import { FAQPageJsonLd } from "@/components/seo/JsonLd";
 
 interface FAQItem {
   question: string;
@@ -65,6 +66,7 @@ const faqColumns: FAQItem[][] = [
 export function FAQSection() {
   return (
     <section className="bg-white py-20 sm:py-32">
+      <FAQPageJsonLd faqs={faqs} />
       <Container>
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-medium tracking-tight text-slate-900 sm:text-4xl">

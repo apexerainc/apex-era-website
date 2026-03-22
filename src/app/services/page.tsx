@@ -6,9 +6,10 @@ import { CTABanner } from "@/components/home/CTABanner";
 import { services } from "@/data/services";
 
 export const metadata = createMetadata({
-  title: "Services",
+  title: "Restoration Marketing Services — SEO, Web Design, Estimating & Automation",
+  rawTitle: true,
   description:
-    "Comprehensive digital marketing solutions built specifically for the restoration industry — SEO, web design, remote estimates, and custom automations.",
+    "Full-service digital marketing for damage restoration companies. Local SEO, conversion-optimized websites, remote Xactimate estimating, and AI-powered business automation nationwide.",
   path: "/services",
 });
 

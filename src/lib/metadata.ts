@@ -6,15 +6,19 @@ export function createMetadata({
   description,
   path = "",
   image,
+  rawTitle,
 }: {
   title?: string;
   description?: string;
   path?: string;
   image?: string;
+  rawTitle?: boolean;
 }): Metadata {
-  const fullTitle = title
-    ? `${title} | ${COMPANY.name}`
-    : `${COMPANY.name} — ${COMPANY.tagline}`;
+  const fullTitle = rawTitle && title
+    ? title
+    : title
+      ? `${title} | ${COMPANY.name}`
+      : `${COMPANY.name} — ${COMPANY.tagline}`;
   const fullDescription = description || COMPANY.description;
   const url = `${COMPANY.url}${path}`;
 
